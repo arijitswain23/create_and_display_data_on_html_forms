@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_product</title>
+</head>
+<body>
+    <center>
+        <h1>List of Products</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Pk</th>
+                <th>Product_Name</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th>Mfg</th>
+            </tr>
+            </thead>
+        {% for po in products %}
+            <tr>
+                <td>{{po.pk}}</td>
+                <td>{{po.product_name}}</td>
+                <td>{{po.quantity}}</td>
+                <td>{{po.amount}}</td>
+                <td>{{po.mfg}}</td>
+            </tr>
+
+        {% endfor %}
+        </table>
+    </center>
+
+    {% for wo in webpages %}
+            <tr>
+                <td>{{wo.pk}}</td>
+                
+                <td>{{wo.topic_name}}</td>
+                <td>{{wo.name}}</td>
+                <td>{{wo.url}}</td>
+                <td>{{wo.email}}</td>
+            </tr>
+
+        {% endfor %}
+    
+</body>
+</html>

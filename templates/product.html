@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>product</title>
+</head>
+<body>
+    <center>
+        <h1 style="color:white;">Vishal Mega Mart Product</h1><br>
+        <table>
+        <form method="POST">
+            {% csrf_token %}
+                <legend>Product Invoice</legend><br>
+
+                <label for="pn">Product_Name</label>
+                <select name="pn" id="pn">
+                    {% for so in shop %}
+                        <option value="{{so.product_name}}">{{so.product_name}}</option>
+                    {% endfor %}
+
+                </select>
+                <br><br>
+            
+                <label for="qu">Quantity</label>
+                    <input type="number" name="qu" id="qu"> <br><br>
+            
+                    <label for="am">Amount</label>
+                    <input type="number" name="am" id="am">
+                    <br>
+                    <br>
+            
+                    <label for="mf">Mfg</label>
+                    <input type="date" name="mf" id="mf"><br><br>
+            
+                    <input type="submit" value="Show Product">
+
+        </form>
+        </table>
+    </center>
+    
+</body>
+</html>

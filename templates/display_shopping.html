@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>display_shopping</title>
+</head>
+<body>
+    <center>
+        <h1>Display_Shopping</h1>
+        <table border="3px">
+            <tr><th>Product_Name</th></tr>
+
+
+            {% for so in shop %}
+
+                <tr>
+                    <td>{{so.product_name}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+</body>
+</html>
